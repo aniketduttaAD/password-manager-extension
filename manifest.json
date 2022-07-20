@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Open Password Manager",
+  "version": "1.0",
+  "description": "simple password manager. Remebers your passwords so that you can remeber other things",
+  "icons": {
+    "128": "/images/icons128.png",
+    "48": "/images/icons64.png",
+    "16": "/images/icons16.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["/popup.js"]
+    }
+  ],
+
+  "action": {
+    "deafault_icon": "/images/icons16.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": ["storage", "notifications", "contextMenus"]
+}

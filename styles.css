@@ -1,0 +1,100 @@
+body {
+  height: 210px;
+  width: 350px;
+  background: whitesmoke;
+}
+
+h1 {
+  margin: 10px 10px 2px 0px;
+  color: coral;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  text-decoration: underline;
+  text-align: center;
+  align-items: center;
+}
+
+.userid,
+.masterpassword {
+  color: coral;
+  margin-left: 8px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.userid_input1 {
+  margin: 12px -5px 0px -5px;
+}
+
+.userid_input2 {
+  margin: 0px -5px 0px -5px;
+}
+
+.button {
+  background-color: coral;
+  border: none;
+  color: white;
+  /* padding: 3px 24px 3px 0px;
+  text-align: center; */
+  text-decoration: none;
+  display: list-item;
+  font-size: 14px;
+  /* margin: 5px 0px 0px 0px; */
+  cursor: pointer;
+}
+
+/* Set a style for all buttons */
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background-color: #04aa6d;
+  color: white;
+  padding: 4px 20px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btnLink {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px 20px;
+  margin: 5px 0px 5px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+/* Add padding to containers */
+/* .container {
+  padding: 16px;
+} */
+
+/* Add a hover effect for buttons */
+button:hover {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  opacity: 0.7;
+}
