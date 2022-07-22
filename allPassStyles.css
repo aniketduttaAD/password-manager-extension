@@ -1,8 +1,10 @@
 h1 {
+  text-align: justify;
   text-align: start;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 30px;
+  margin-top: 30px;
   margin-bottom: -10px;
   color: coral;
   text-decoration: underline;
@@ -23,13 +25,12 @@ h6 {
   font-size: medium;
 }
 
-.addItem {
-  width: 22px;
-  height: 22px;
+#addItem {
+  width: 50px;
+  height: 48px;
   position: absolute;
-  top: 30px;
-  left: 97%;
-  margin: -8px 0 0 -8px;
+  top: 17px;
+  right: 95px;
   z-index: 2;
   border-radius: 25px;
   background: #fff;
@@ -37,13 +38,55 @@ h6 {
   box-shadow: none;
   outline: none;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+#addItem svg {
+  width: 23px;
+  height: 20px;
+  position: absolute;
+  top: 42%;
+  left: 45%;
+  margin: -4px 0 0 18px;
 }
 
-.addItem svg {
-  width: 22px;
-  height: 22px;
+#logout {
+  width: 50px;
+  height: 40px;
   position: absolute;
-  top: 20%;
-  left: 45%;
-  margin: -8px 0 0 -8px;
+  top: 21px;
+  right: 20px;
+  z-index: 2;
+  border-radius: 25px;
+  background: #fff;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
 }
+#logout svg {
+  border-style: groove;
+  border-color: black;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 32%;
+  left: 45%;
+  margin: -5px 0 0 -8px;
+}
+#logout svg:hover {
+  opacity: 0.3;
+  border-color: coral;
+}
+
+/* .container {
+  padding: 16px;
+} */

@@ -1,19 +1,16 @@
+let isLoggedIn;
 document.addEventListener("DOMContentLoaded", function () {
   const rmasterPassword = "abc",
     ruserId = "abcd";
 
   // get values from local storage
-  let userId, isLoggedIn;
+  let userId;
   chrome.storage.local.get(["userId", "isLoggedIn"], function (result) {
     userId = result.userId;
     isLoggedIn = result.isLoggedIn;
     if (userId === ruserId && isLoggedIn) {
-      fetch("allpassword.html")
-        .then((response) => response.text())
-        .then((html) => {
-          const newWindow = window.open("about:blank", "_blank");
-          newWindow.document.write(html);
-        });
+      const newWindow = window.open("about:blank", "_blank");
+      newWindow.location = "allpassword.html";
     } else {
       const loginForm = document.getElementById("loginForm");
       const forgot = document.getElementById("reset");
@@ -37,9 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             chrome.storage.local.set({ [isloggedInKey]: true }, function () {
               console.log("isLoggedIn is set to " + isLoggedIn);
               const newWindow = window.open("about:blank", "_blank");
-              fetch("allpassword.html")
-                .then((response) => response.text())
-                .then((html) => newWindow.document.write(html));
+              newWindow.location = "allpassword.html";
             });
           });
         } else {
