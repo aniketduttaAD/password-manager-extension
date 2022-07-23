@@ -2,20 +2,20 @@
 <html>
   <head>
     <title>Open Password Manager</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/css/popup.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap"
       rel="stylesheet"
     />
-    <script src="popup.js"></script>
+    <script src="/js/popup.js"></script>
   </head>
   <body>
     <h1>Open Password Manager</h1>
     <section id="contentSection">
       <form id="loginForm">
-        <div class="container">
+        <div>
           <div class="userid_input1">
             <label class="userid" for="userId">User ID</label>
             <input type="text" id="userId" name="userId" />
@@ -29,11 +29,10 @@
           <p class="error" id="invalidCredentialsMsg" style="display: none">
             Invalid username or password
           </p>
-          <button class="button" type="submit" id="login">Log-in</button>
+          <button type="submit" id="login">Log-in</button>
         </div>
-
-        <div class="container">
-          <button class="button" id="reset">Forgot Password</button>
+        <div>
+          <button id="reset">Forgot Password</button>
           <button class="btnLink" id="newUser">Create a account</button>
         </div>
       </form>

@@ -1,10 +1,12 @@
-let isLoggedIn;
-document.addEventListener("DOMContentLoaded", function () {
-  const rmasterPassword = "abc",
+document.addEventListener("DOMContentLoaded", () => {
+  let rmasterPassword = "abc",
     ruserId = "abcd";
-
+  //set values to local storage
+  chrome.storage.local.get(["nmasterPassword"], function (result) {
+    rmasterPassword = result.nmasterPassword;
+  });
   // get values from local storage
-  let userId;
+  let userId, isLoggedIn;
   chrome.storage.local.get(["userId", "isLoggedIn"], function (result) {
     userId = result.userId;
     isLoggedIn = result.isLoggedIn;
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const loginForm = document.getElementById("loginForm");
       const forgot = document.getElementById("reset");
       const newuser = document.getElementById("newUser");
-      const contentSection = document.getElementById("contentSection");
+      let contentSection = document.getElementById("contentSection");
 
       loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -46,13 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
       forgot.addEventListener("click", function () {
         fetch("forgotpassword.html")
           .then((response) => response.text())
-          .then((html) => (contentSection.innerHTML = html));
+          .then((html) => {
+            document.write(html);
+          });
       });
 
       newuser.addEventListener("click", function () {
         fetch("newuser.html")
           .then((response) => response.text())
-          .then((html) => (contentSection.innerHTML = html));
+          .then((html) => {
+            document.write(html);
+          });
       });
     }
   });

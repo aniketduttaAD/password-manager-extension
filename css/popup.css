@@ -1,7 +1,7 @@
 body {
   height: 210px;
   width: 350px;
-  background: whitesmoke;
+  background: rgba(245, 245, 245, 0.568);
 }
 
 h1 {
@@ -31,30 +31,19 @@ h1 {
   margin: 0px -5px 0px -5px;
 }
 
-.button {
-  background-color: coral;
-  border: none;
-  color: white;
-  /* padding: 3px 24px 3px 0px;
-  text-align: center; */
-  text-decoration: none;
-  display: list-item;
-  font-size: 14px;
-  /* margin: 5px 0px 0px 0px; */
-  cursor: pointer;
-}
 
 /* Set a style for all buttons */
 button {
   font-family: "Poppins", sans-serif;
+  background-color: coral;
   font-weight: 300;
-  background-color: #04aa6d;
   color: white;
-  padding: 4px 20px;
+  padding: 4px 0;
   margin: 4px 0;
   border: none;
   cursor: pointer;
   width: 100%;
+  border-radius: 30px;
 }
 
 .btnLink {
