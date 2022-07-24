@@ -1,39 +1,28 @@
 body {
-  width: 350px;
+  height: 250px;
+  width: 480px;
   background: whitesmoke;
 }
-
 h1 {
-  margin: 10px 10px 2px 0px;
-  color: coral;
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  text-decoration: underline;
   text-align: center;
   align-items: center;
-}
-h2 {
-  align-items: flex-start;
-  text-decoration: underline;
-  color: coral;
+  margin: 0px 0px -10px 0px;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
+  color: coral;
+  text-decoration: underline;
 }
 h3 {
-  color: rgba(255, 127, 80, 0.87);
-  margin: 8px 10px 0px 0px;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  color: coral;
+  margin: 5px;
 }
-
 button {
   font-family: "Poppins", sans-serif;
   background-color: coral;
   font-weight: 300;
   color: white;
-  padding: 4px 0;
-  margin: 4px 0;
+  padding: 4px 175px;
+  margin: 10px 0;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -44,10 +33,21 @@ button:hover {
   font-weight: bold;
   opacity: 0.7;
 }
-
+p {
+  align-items: flex-start;
+  margin-left: 13px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
+    Courier, monospace, sans-serif;
+  font-size: 15px;
+  color: black;
+}
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   width: 100%;
+  color: black;
   padding: 8px 20px;
   margin: 5px 0px 5px 0px;
   display: inline-block;
@@ -55,9 +55,4 @@ input[type="password"] {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-}
-
-#successful{
-color: red;
-font-size: 14px;
 }

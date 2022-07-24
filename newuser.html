@@ -2,22 +2,29 @@
 <html>
   <head>
     <title>New User Sign-Up</title>
+    <link rel="stylesheet" href="/css/newuser.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <style>
-    body {
-      height: 210px;
-      width: 295px;
-      background: whitesmoke;
-    }
-    p {
-      color: brown;
-    }
-  </style>
   <body>
-    <p>Welcome to Open Password Manager.</p>
+    <h1>Welcome to Open Password Manager</h1>
     <p>
       A simple password manager that remebers all your passwords so that you
-      could remeber other important things
+      could remeber other important things...
     </p>
+    <div>
+      <h3>Email</h3>
+      <input type="email" id="email" name="email" />
+      <h3>Username</h3>
+      <input type="text" id="userId" name="username" />
+      <h3>Master Password</h3>
+      <input type="password" id="masterPassword" name="masterPassword" />
+      <button id="submit">Submit</button>
+    </div>
+    <script src="/js/newuser.js"></script>
   </body>
 </html>
