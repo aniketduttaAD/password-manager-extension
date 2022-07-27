@@ -56,6 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
+      const forgotPassword = document.getElementById("forgotPassword");
+      forgotPassword.addEventListener("click", function () {
+        fetch("forgotPassword.html")
+          .then((response) => response.text())
+          .then((html) => {
+            document.write(html);
+          });
+      });
+
       newuser.addEventListener("click", function () {
         fetch("newuser.html")
           .then((response) => response.text())

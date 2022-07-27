@@ -8,7 +8,7 @@ const handleLogout = (e) => {
 };
 
 const forgot = (e) => {
-  fetch("forgotpassword.html")
+  fetch("resetpassword.html")
   .then((response) => response.text())
   .then((html) => {
     document.write(html);
