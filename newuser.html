@@ -17,12 +17,27 @@
       could remeber other important things...
     </p>
     <div>
-      <h3>Email</h3>
-      <input type="email" id="email" name="email" />
-      <h3>User ID</h3>
-      <input type="text" id="userId" name="username" />
-      <h3>Master Password</h3>
-      <input type="password" id="masterPassword" name="masterPassword" />
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="jondoe@abc.com"
+      />
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" placeholder="Jon" />
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Doe" />
+      <label for="userId">User ID</label>
+      <input type="text" id="userId" name="userId" placeholder="jdoe" />
+      <label for="password">Master Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="********"
+      />
+      <p id="errorMsg"></p>
       <button id="submit">Submit</button>
     </div>
     <script src="/js/newuser.js"></script>
