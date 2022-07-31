@@ -49,6 +49,7 @@ public class UserRepositoryImpl implements UserRepository{
 
     @Override
     public User findByEmailAndPassword(String email, String password) throws EtAuthException {
+        if (email.indexOf('@') > 0) {
             try {
                 User user = jdbcTemplate.queryForObject(SQL_FIND_BY_EMAIL, new Object[]{email}, userRowMapper);
                 if (!BCrypt.checkpw(password, user.getPassword()))
@@ -58,6 +59,17 @@ public class UserRepositoryImpl implements UserRepository{
                 throw new EtAuthException("Invalid email or password");
             }
         }
+        else {
+            try {
+            User user = jdbcTemplate.queryForObject(SQL_FIND_BY_ID, new Object[]{email}, userRowMapper);
+            if (!BCrypt.checkpw(password, user.getPassword()))
+                throw new EtAuthException("Invalid email or password");
+            return user;
+        } catch (EmptyResultDataAccessException e) {
+            throw new EtAuthException("Invalid email or password");
+        }
+        }
+    }
 
     @Override
     public Integer getCountByEmail(String email) {
