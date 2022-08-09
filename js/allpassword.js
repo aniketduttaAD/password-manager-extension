@@ -16,5 +16,10 @@ const forgot = (e) => {
     });
 };
 
+const addItem = (e) => {
+  alert("button clicked");
+}
+
 document.getElementById("reset").addEventListener("click", forgot);
 document.getElementById("logout").addEventListener("click", handleLogout);
+document.getElementById("addItem").addEventListener("click", addItem);
