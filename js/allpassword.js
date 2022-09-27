@@ -17,8 +17,8 @@ const forgot = (e) => {
 };
 
 const addItem = (e) => {
-  alert("button clicked");
-}
+  window.open("newpassword.html");
+};
 
 document.getElementById("reset").addEventListener("click", forgot);
 document.getElementById("logout").addEventListener("click", handleLogout);
