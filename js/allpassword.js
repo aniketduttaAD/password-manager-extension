@@ -16,10 +16,15 @@ const forgot = (e) => {
     });
 };
 
-const addItem = (e) => {
-  window.open("newpassword.html");
-};
+let popup = document.getElementById("popup");
+function openPopup() {
+  popup.classList.add("open-popup");
+}
+function closePopup() {
+  popup.classList.remove("open-popup");
+}
 
 document.getElementById("reset").addEventListener("click", forgot);
 document.getElementById("logout").addEventListener("click", handleLogout);
-document.getElementById("addItem").addEventListener("click", addItem);
+document.getElementById("addItem").addEventListener("click", openPopup);
+document.getElementById("done").addEventListener("click", closePopup);
