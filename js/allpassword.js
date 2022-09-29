@@ -1,7 +1,18 @@
-chrome.storage.local.get(["email", "token"], function (result) {
+chrome.storage.local.get(["email", "token", "formval"], function (result) {
   let email = result.email;
   let token = result.token;
-  console.log(email, token);
+  let formval = result.formval;
+  console.log(email, token, formval);
+  const dataContainer = document.getElementById("dataContainer");
+  formval.map((formValues) => {
+    const liEle = document.createElement("li");
+    Object.keys(formValues).map((key) => {
+      const spanEle = document.createElement("span");
+      spanEle.append(`${key}: ${formValues[key]}`);
+      liEle.append(spanEle);
+    });
+    dataContainer.appendChild(liEle);
+  });
 });
 
 const handleLogout = (e) => {
@@ -20,11 +31,24 @@ let popup = document.getElementById("popup");
 function openPopup() {
   popup.classList.add("open-popup");
 }
-function closePopup() {
+
+function handleSubmit(e) {
+  e.preventDefault();
   popup.classList.remove("open-popup");
+  const formData = new FormData(e.target);
+  const formValues = Object.fromEntries(formData);
+  chrome.storage.local.get(["formval"], function (result) {
+    let formValuesFromStorage = result.formval;
+    chrome.storage.local.set(
+      { formval: [...formValuesFromStorage, formValues] },
+      function () {}
+    );
+  });
+
+  e.target.reset();
 }
 
 document.getElementById("reset").addEventListener("click", forgot);
 document.getElementById("logout").addEventListener("click", handleLogout);
 document.getElementById("addItem").addEventListener("click", openPopup);
-document.getElementById("done").addEventListener("click", closePopup);
+document.getElementById("popup").addEventListener("submit", handleSubmit);
